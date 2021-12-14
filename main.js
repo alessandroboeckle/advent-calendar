@@ -10,7 +10,14 @@ const openDoor = (path, event) => {
     event.target.parentNode.style.backgroundImage = `url(${path})`;
     event.target.style.opacity = "0";
     event.target.style.backgroundColor = "#521751";
+    if (date1 <= 9) {
+        if (document.getElementById('div.text').clicked == true) {
+            alert("du bist zu früh dran!")
+        }
+    } 
+        
 }
+
 
 const createCalendar = () => {
     for(let i = 0; i  < calendarDays; i++) {
@@ -31,8 +38,20 @@ const createCalendar = () => {
         let coursePath = `./courses/course-${courseNumber}.jpg`;
 
         calendarDoorText.addEventListener("click", openDoor.bind(null,  coursePath));
+
+        
     }
 }
 
 calendarButton.addEventListener("click", createCalendar);
 
+
+
+
+
+if (date1 <= 9) {
+    if (document.getElementById('door11').clicked == true) {
+        alert("du bist zu früh dran!")
+    }
+} 
+    
